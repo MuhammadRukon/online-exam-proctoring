@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import Link from "next/link";
 
 export default function Home() {
   // Sample rules - replace with your actual rules
@@ -51,9 +52,14 @@ export default function Home() {
       </div>
 
       {/* Button*/}
-      <Button size="lg" className="px-8 bg-blue-300">
-        Start Proctored Exam
-      </Button>
+      <Link href="/verification">
+        <Button
+          size="lg"
+          className="px-8 bg-blue-500 hover:bg-blue-600 text-white"
+        >
+          Start Proctored Exam
+        </Button>
+      </Link>
     </main>
   );
 }
